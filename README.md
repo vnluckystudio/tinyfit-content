@@ -28,7 +28,7 @@ python3 tools/build_pack.py \
   --output-dir dist
 ```
 
-The tool validates source assets, writes a deterministic ZIP, and emits its SHA-256. Review the archive, then publish it as a GitHub Release asset:
+The tool validates source assets, writes a versioned ZIP, and emits its SHA-256. Review the archive, then publish it as a GitHub Release asset:
 
 ```sh
 gh release create cats-01-v1.0.0 \
