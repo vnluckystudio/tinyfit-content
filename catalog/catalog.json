@@ -4,7 +4,6 @@
   "totalWorlds": 20,
   "levelsPerWorld": 50,
   "levelsPerPack": 25,
-  "offlineStarterPackId": "w01-p01",
   "preloadWindowLevels": 25,
   "keepCurrentAndNextPack": true,
   "worlds": [
@@ -19,8 +18,8 @@
         "w01-p01",
         "w01-p02"
       ],
-      "offlineStarter": true,
-      "contentStatus": "partial-source"
+      "offlineStarter": false,
+      "contentStatus": "ready"
     },
     {
       "id": "w02",
@@ -328,7 +327,8 @@
       ],
       "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/w01-p01-v1.0.4/tinyfit-w01-p01-v1.0.4.zip",
       "sizeBytes": 5566634,
-      "sha256": "765841586661c77d616728b0cf73df9027765d497b7f89f121cbfcfbdfded903"
+      "sha256": "765841586661c77d616728b0cf73df9027765d497b7f89f121cbfcfbdfded903",
+      "theme": "cats"
     },
     {
       "packId": "w01-p02",
@@ -368,7 +368,8 @@
       ],
       "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/w01-p02-v1.0.2/tinyfit-w01-p02-v1.0.2.zip",
       "sizeBytes": 3711930,
-      "sha256": "ca8bffcbfd9f3f757336161869b5222f2c64c25b11fb78683dd9e0c2f8f1a988"
+      "sha256": "ca8bffcbfd9f3f757336161869b5222f2c64c25b11fb78683dd9e0c2f8f1a988",
+      "theme": "cats"
     },
     {
       "packId": "w02-p01",
@@ -408,7 +409,9 @@
       ],
       "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/w02-p01-v1.0.1/tinyfit-w02-p01-v1.0.1.zip",
       "sizeBytes": 2538398,
-      "sha256": "7f0af059c75f01488c7e326c7bb1674f665c81acbc93b0548a726a1184a24ff2"
+      "sha256": "7f0af059c75f01488c7e326c7bb1674f665c81acbc93b0548a726a1184a24ff2",
+      "theme": "ocean"
     }
-  ]
+  ],
+  "startupDownloadPackId": "w01-p01"
 }

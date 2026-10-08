@@ -61,10 +61,17 @@ def main() -> None:
         parser.error(str(error))
 
     source = args.source_root.resolve()
-    levels_path = source / "TinyFit/Resources/Levels/levels.json"
-    regions_path = source / "TinyFit/Resources/Demo/level_regions.json"
-    art_dir = source / "TinyFit/Resources/Demo/LevelArt"
-    pieces_dir = source / "TinyFit/Resources/Demo/LevelPieces"
+    pack_source = source / "TinyFit/Resources/Artwork/Worlds" / f"{world['order']:02d}-{world['slug']}" / "Packs" / f"{pack['packNumber']:02d}"
+    if pack_source.is_dir():
+        levels_path = pack_source / "levels.json"
+        regions_path = pack_source / "level_regions.json"
+        art_dir = pack_source / "LevelArt"
+        pieces_dir = pack_source / "LevelPieces"
+    else:
+        levels_path = source / "TinyFit/Resources/Levels/levels.json"
+        regions_path = source / "TinyFit/Resources/Demo/level_regions.json"
+        art_dir = source / "TinyFit/Resources/Demo/LevelArt"
+        pieces_dir = source / "TinyFit/Resources/Demo/LevelPieces"
     for required in (levels_path, regions_path, art_dir, pieces_dir):
         if not required.exists():
             parser.error(f"Missing source path: {required}")
@@ -77,7 +84,7 @@ def main() -> None:
     missing_levels = []
     for new_id in pack["levelIds"]:
         source_id = new_to_old.get(new_id, new_id)
-        level = by_id.get(source_id)
+        level = by_id.get(source_id) or by_id.get(new_id)
         if level is None:
             missing_levels.append(new_id)
         else:
@@ -98,6 +105,22 @@ def main() -> None:
     all_regions = read_json(regions_path)
     pack_regions: dict[str, list[dict]] = {}
     files: dict[str, Path] = {}
+    map_source = pack_source / "HomeMap" if pack_source.is_dir() else source / "TinyFit/Resources/HomeMap"
+    if pack["id"] == "w01-p01":
+        map_names = [*(f"meow-meadow-map-page-{number:02d}" for number in range(1, 11)),
+                     "meow-meadow-cloud-left", "meow-meadow-cloud-right"]
+        for name in map_names:
+            map_path = artwork_file(map_source, name)
+            if map_path is None:
+                parser.error(f"Missing starter map artwork: {name}.png/.webp")
+            files[f"HomeMap/{map_path.name}"] = map_path
+    elif map_source.is_dir():
+        map_stems = sorted({path.stem for path in (*map_source.glob("*.png"), *map_source.glob("*.webp"))})
+        for stem in map_stems:
+            map_path = artwork_file(map_source, stem)
+            if map_path is not None:
+                files[f"HomeMap/{map_path.name}"] = map_path
+
     for level in selected:
         target_asset = level["targetAsset"]
         regions = all_regions.get(target_asset)
@@ -117,10 +140,9 @@ def main() -> None:
 
     # Rewrite only the level IDs in the archive; every other gameplay field remains source-authored.
     packaged_levels = []
-    source_to_new = {old_id: new_id for old_id, new_id in new_to_old.items()}
     for level in selected:
         item = dict(level)
-        item["id"] = source_to_new.get(level["id"], level["id"])
+        item["id"] = old_to_new.get(level["id"], level["id"])
         packaged_levels.append(item)
 
     args.output_dir.mkdir(parents=True, exist_ok=True)

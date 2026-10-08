@@ -8,7 +8,7 @@
   "theme": "cats",
   "levelCount": 50,
   "levelsPerPack": 25,
-  "offlineStarter": true,
+  "offlineStarter": false,
   "packIds": [
     "w01-p01",
     "w01-p02"
