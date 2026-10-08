@@ -19,7 +19,7 @@ Only `w01-p01` is bundled for offline play at first install. The app should pref
 
 ## Content status
 
-The current project has six approved levels for each of its five original themes (30 total). Those levels seed the first pack of worlds 1–5. The first offline pack, `w01-p01`, still needs 19 additional approved cat masters; world 1's second pack needs 25. No incomplete pack is listed in `publishedPacks` or released under the new world IDs.
+The 25-artwork `w01-p02` Meow Meadow pack is published as `w01-p02-v1.0.0`. The new 25-level offline starter artwork and pack archive are prepared in the private app workspace; they still need to be integrated into the app bundle before `w01-p01` can be marked offline-included. No incomplete pack is listed in `publishedPacks`.
 
 This catalog is the approved target structure, not yet a client-ready downloadable catalog: the TinyFit app still uses its bundled pilot content and has not switched to the world/pack loader. The existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
 
