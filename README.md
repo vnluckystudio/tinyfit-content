@@ -19,11 +19,15 @@ The app has no bundled puzzle or map artwork. On first launch it downloads `w01-
 
 ## Content status
 
-The 25-level `w01-p01` Meow Meadow startup pack is published as `w01-p01-v1.0.3`, including ten map pages and two cloud transition images. This release also fixes legacy-to-world level ID conversion. The 25-artwork `w01-p02` follow-up pack remains published as `w01-p02-v1.0.0`; the public catalog lists both for client downloads.
+Source-completeness fields track approved authoring inputs separately from binary availability. A release may be downloadable while additional source approval or authoring work remains.
 
-The TinyFit app downloads the startup pack on first launch, reads the published-pack catalog, verifies and installs release archives, and prefetches Meow Meadow Pack 02 when the player reaches level 20. The remaining worlds stay planned until the Meow Meadow flow is confirmed. Existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
+`w01-p01` is published as WebP release `w01-p01-v1.0.4`, including all 25 levels, ten map pages, and two cloud transition images. `w01-p02-v1.0.2` and `w02-p01-v1.0.1` are also available as WebP releases. The TinyFit app downloads the startup pack on first launch, reads the published-pack catalog, verifies and installs release archives, and prefetches Meow Meadow Pack 02 when the player reaches level 20. The remaining worlds stay planned until the Meow Meadow flow is confirmed. Existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
 
 Artwork must be copied from approved masters and split only along the visible seams in those masters. The pack builder does not generate seams or infer piece boundaries.
+
+## Artwork delivery format
+
+Keep approved PNGs as source artwork. Content pack ZIPs use WebP delivery images: masters at Q10, pieces and ghosts at Q5, and maps at Q30. Encode with `-alpha_q 100 -exact` and verify that every decoded alpha mask matches its PNG source. If both formats exist beside a source asset, pack builders must prefer WebP and include only that format in the ZIP. The app reads WebP and retains PNG support for older packs.
 
 ## Build a complete pack
 
