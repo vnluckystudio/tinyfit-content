@@ -46,8 +46,8 @@
     "cat_006"
   ],
   "missingArtworkCount": 19,
-  "releaseTag": null,
-  "assetName": null,
-  "sizeBytes": null,
-  "sha256": null
+  "releaseTag": "w01-p01-v1.0.4",
+  "assetName": "tinyfit-w01-p01-v1.0.4.zip",
+  "sizeBytes": 5566634,
+  "sha256": "765841586661c77d616728b0cf73df9027765d497b7f89f121cbfcfbdfded903"
 }

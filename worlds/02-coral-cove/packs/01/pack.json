@@ -46,8 +46,8 @@
     "ocean_006"
   ],
   "missingArtworkCount": 19,
-  "releaseTag": null,
-  "assetName": null,
-  "sizeBytes": null,
-  "sha256": null
+  "releaseTag": "w02-p01-v1.0.1",
+  "assetName": "tinyfit-w02-p01-v1.0.1.zip",
+  "sizeBytes": 2538398,
+  "sha256": "7f0af059c75f01488c7e326c7bb1674f665c81acbc93b0548a726a1184a24ff2"
 }

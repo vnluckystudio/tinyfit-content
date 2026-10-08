@@ -39,8 +39,8 @@
   "contentStatus": "planned",
   "availableSourceLevelIds": [],
   "missingArtworkCount": 25,
-  "releaseTag": null,
-  "assetName": null,
-  "sizeBytes": null,
-  "sha256": null
+  "releaseTag": "w01-p02-v1.0.2",
+  "assetName": "tinyfit-w01-p02-v1.0.2.zip",
+  "sizeBytes": 3711930,
+  "sha256": "ca8bffcbfd9f3f757336161869b5222f2c64c25b11fb78683dd9e0c2f8f1a988"
 }

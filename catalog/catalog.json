@@ -289,5 +289,126 @@
       "contentStatus": "planned"
     }
   ],
-  "publishedPacks": []
+  "publishedPacks": [
+    {
+      "packId": "w01-p01",
+      "version": "1.0.4",
+      "worldId": "w01",
+      "packNumber": 1,
+      "levelRange": [
+        1,
+        25
+      ],
+      "levelIds": [
+        "w01-001",
+        "w01-002",
+        "w01-003",
+        "w01-004",
+        "w01-005",
+        "w01-006",
+        "w01-007",
+        "w01-008",
+        "w01-009",
+        "w01-010",
+        "w01-011",
+        "w01-012",
+        "w01-013",
+        "w01-014",
+        "w01-015",
+        "w01-016",
+        "w01-017",
+        "w01-018",
+        "w01-019",
+        "w01-020",
+        "w01-021",
+        "w01-022",
+        "w01-023",
+        "w01-024",
+        "w01-025"
+      ],
+      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/w01-p01-v1.0.4/tinyfit-w01-p01-v1.0.4.zip",
+      "sizeBytes": 5566634,
+      "sha256": "765841586661c77d616728b0cf73df9027765d497b7f89f121cbfcfbdfded903"
+    },
+    {
+      "packId": "w01-p02",
+      "version": "1.0.2",
+      "worldId": "w01",
+      "packNumber": 2,
+      "levelRange": [
+        26,
+        50
+      ],
+      "levelIds": [
+        "w01-026",
+        "w01-027",
+        "w01-028",
+        "w01-029",
+        "w01-030",
+        "w01-031",
+        "w01-032",
+        "w01-033",
+        "w01-034",
+        "w01-035",
+        "w01-036",
+        "w01-037",
+        "w01-038",
+        "w01-039",
+        "w01-040",
+        "w01-041",
+        "w01-042",
+        "w01-043",
+        "w01-044",
+        "w01-045",
+        "w01-046",
+        "w01-047",
+        "w01-048",
+        "w01-049",
+        "w01-050"
+      ],
+      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/w01-p02-v1.0.2/tinyfit-w01-p02-v1.0.2.zip",
+      "sizeBytes": 3711930,
+      "sha256": "ca8bffcbfd9f3f757336161869b5222f2c64c25b11fb78683dd9e0c2f8f1a988"
+    },
+    {
+      "packId": "w02-p01",
+      "version": "1.0.1",
+      "worldId": "w02",
+      "packNumber": 1,
+      "levelRange": [
+        1,
+        25
+      ],
+      "levelIds": [
+        "w02-001",
+        "w02-002",
+        "w02-003",
+        "w02-004",
+        "w02-005",
+        "w02-006",
+        "w02-007",
+        "w02-008",
+        "w02-009",
+        "w02-010",
+        "w02-011",
+        "w02-012",
+        "w02-013",
+        "w02-014",
+        "w02-015",
+        "w02-016",
+        "w02-017",
+        "w02-018",
+        "w02-019",
+        "w02-020",
+        "w02-021",
+        "w02-022",
+        "w02-023",
+        "w02-024",
+        "w02-025"
+      ],
+      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/w02-p01-v1.0.1/tinyfit-w02-p01-v1.0.1.zip",
+      "sizeBytes": 2538398,
+      "sha256": "7f0af059c75f01488c7e326c7bb1674f665c81acbc93b0548a726a1184a24ff2"
+    }
+  ]
 }

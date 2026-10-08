@@ -27,6 +27,14 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def artwork_file(root: Path, asset: str, suffix: str = "") -> Path | None:
+    for extension in (".webp", ".png"):
+        candidate = root / f"{asset}{suffix}{extension}"
+        if candidate.is_file():
+            return candidate
+    return None
+
+
 def find_pack(pack_id: str) -> tuple[Path, dict, dict]:
     for path in (ROOT / "worlds").rglob("pack.json"):
         pack = read_json(path)
@@ -96,15 +104,15 @@ def main() -> None:
         if regions is None or len(regions) != len(level["pieces"]):
             parser.error(f"Region count does not match piece count for {level['id']}")
         pack_regions[target_asset] = regions
-        master_path = art_dir / f"{target_asset}.png"
-        if not master_path.is_file():
-            parser.error(f"Missing master artwork: {master_path}")
+        master_path = artwork_file(art_dir, target_asset)
+        if master_path is None:
+            parser.error(f"Missing master artwork: {target_asset}.png/.webp")
         files[f"LevelArt/{master_path.name}"] = master_path
         for region in regions:
-            for suffix in (".png", "_ghost.png"):
-                piece_path = pieces_dir / f"{region['asset']}{suffix}"
-                if not piece_path.is_file():
-                    parser.error(f"Missing piece artwork: {piece_path}")
+            for suffix in ("", "_ghost"):
+                piece_path = artwork_file(pieces_dir, region["asset"], suffix)
+                if piece_path is None:
+                    parser.error(f"Missing piece artwork: {region['asset']}{suffix}.png/.webp")
                 files[f"LevelPieces/{piece_path.name}"] = piece_path
 
     # Rewrite only the level IDs in the archive; every other gameplay field remains source-authored.

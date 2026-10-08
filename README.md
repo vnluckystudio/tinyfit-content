@@ -19,11 +19,20 @@ Only `w01-p01` is bundled for offline play at first install. The app should pref
 
 ## Content status
 
-The current project has six approved levels for each of its five original themes (30 total). Those levels seed the first pack of worlds 1–5. The first offline pack, `w01-p01`, still needs 19 additional approved cat masters; world 1's second pack needs 25. No incomplete pack is listed in `publishedPacks` or released under the new world IDs.
+Source-completeness fields track approved authoring inputs and remain separate from binary availability. `publishedPacks` lists the versioned assets currently available to the app; the three first world packs are published from the reviewed app artwork. A release can be downloadable while additional source approval or authoring work remains.
 
-This catalog is the approved target structure, not yet a client-ready downloadable catalog: the TinyFit app still uses its bundled pilot content and has not switched to the world/pack loader. The existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
+The TinyFit app's world/pack loader reads this catalog for downloadable content. The existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
 
 Artwork must be copied from approved masters and split only along the visible seams in those masters. The pack builder does not generate seams or infer piece boundaries.
+
+## Artwork delivery format
+
+Keep approved PNGs as source artwork. Content pack ZIPs use WebP delivery images:
+masters at Q10, pieces and ghosts at Q5, and maps at Q30. Encode with
+`-alpha_q 100 -exact` and verify that every decoded alpha mask matches its PNG
+source. If both formats exist beside a source asset, pack builders must prefer
+WebP and include only that format in the ZIP. The app reads WebP and retains PNG
+support for older packs.
 
 ## Build a complete pack
 
