@@ -126,10 +126,9 @@ def main() -> None:
 
     # Rewrite only the level IDs in the archive; every other gameplay field remains source-authored.
     packaged_levels = []
-    source_to_new = {old_id: new_id for old_id, new_id in new_to_old.items()}
     for level in selected:
         item = dict(level)
-        item["id"] = source_to_new.get(level["id"], level["id"])
+        item["id"] = old_to_new.get(level["id"], level["id"])
         packaged_levels.append(item)
 
     args.output_dir.mkdir(parents=True, exist_ok=True)

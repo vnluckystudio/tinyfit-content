@@ -19,7 +19,7 @@ The app has no bundled puzzle or map artwork. On first launch it downloads `w01-
 
 ## Content status
 
-The 25-level `w01-p01` Meow Meadow startup pack is published as `w01-p01-v1.0.2`, including ten map pages and two cloud transition images. The 25-artwork `w01-p02` follow-up pack remains published as `w01-p02-v1.0.0`; the public catalog lists both for client downloads.
+The 25-level `w01-p01` Meow Meadow startup pack is published as `w01-p01-v1.0.3`, including ten map pages and two cloud transition images. This release also fixes legacy-to-world level ID conversion. The 25-artwork `w01-p02` follow-up pack remains published as `w01-p02-v1.0.0`; the public catalog lists both for client downloads.
 
 The TinyFit app downloads the startup pack on first launch, reads the published-pack catalog, verifies and installs release archives, and prefetches Meow Meadow Pack 02 when the player reaches level 20. The remaining worlds stay planned until the Meow Meadow flow is confirmed. Existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
 
