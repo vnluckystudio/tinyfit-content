@@ -1,18 +1,51 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["schemaVersion", "game", "totalWorlds", "levelsPerWorld", "levelsPerPack", "offlineStarterPackId", "preloadWindowLevels", "keepCurrentAndNextPack", "worlds", "publishedPacks"],
+  "required": [
+    "schemaVersion",
+    "game",
+    "totalWorlds",
+    "levelsPerWorld",
+    "levelsPerPack",
+    "startupDownloadPackId",
+    "preloadWindowLevels",
+    "keepCurrentAndNextPack",
+    "worlds",
+    "publishedPacks"
+  ],
   "properties": {
-    "schemaVersion": {"const": 2},
-    "game": {"const": "TinyFit"},
-    "totalWorlds": {"const": 20},
-    "levelsPerWorld": {"const": 50},
-    "levelsPerPack": {"const": 25},
-    "offlineStarterPackId": {"type": "string"},
-    "preloadWindowLevels": {"const": 25},
-    "keepCurrentAndNextPack": {"const": true},
-    "worlds": {"type": "array", "minItems": 20, "maxItems": 20},
-    "publishedPacks": {"type": "array"}
+    "schemaVersion": {
+      "const": 2
+    },
+    "game": {
+      "const": "TinyFit"
+    },
+    "totalWorlds": {
+      "const": 20
+    },
+    "levelsPerWorld": {
+      "const": 50
+    },
+    "levelsPerPack": {
+      "const": 25
+    },
+    "preloadWindowLevels": {
+      "const": 25
+    },
+    "keepCurrentAndNextPack": {
+      "const": true
+    },
+    "worlds": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20
+    },
+    "publishedPacks": {
+      "type": "array"
+    },
+    "startupDownloadPackId": {
+      "type": "string"
+    }
   },
   "additionalProperties": false
 }

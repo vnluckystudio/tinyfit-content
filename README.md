@@ -13,15 +13,15 @@ Public catalog and GitHub Release distribution for TinyFit's world-based puzzle 
 
 Pack IDs are `w01-p01` through `w20-p02`; level IDs are stable (`w01-001`–`w01-050`, etc.). Release tags use `<pack-id>-v<version>`, for example `w01-p01-v1.0.0`.
 
-## Offline and prefetch plan
+## Startup download and cache plan
 
-Only `w01-p01` is bundled for offline play at first install. The app should prefetch the next 25-level pack near the end of the active pack and keep the active and next packs cached. Players finish all 50 levels in a world before the next world opens. Previously completed packs can be downloaded again if evicted; progress is stored separately from artwork.
+The app has no bundled puzzle or map artwork. On first launch it downloads `w01-p01` (levels 1–25 plus Meow Meadow map artwork), then keeps the pack cached for offline play. The next 25-level pack can be prefetched near the end of the active pack; players finish all 50 levels in a world before the next world opens. Previously completed packs can be downloaded again if cleaned; progress is stored separately from artwork.
 
 ## Content status
 
-The 25-level `w01-p01` Meow Meadow starter pack is bundled in the app for offline play. The 25-artwork `w01-p02` follow-up pack is published as `w01-p02-v1.0.0`; the public catalog lists it for client downloads. `w01-p01` remains outside `publishedPacks` because it ships inside the app.
+The 25-level `w01-p01` Meow Meadow startup pack is published as `w01-p01-v1.0.2`, including ten map pages and two cloud transition images. The 25-artwork `w01-p02` follow-up pack remains published as `w01-p02-v1.0.0`; the public catalog lists both for client downloads.
 
-The TinyFit app now loads the offline starter pack, reads the published-pack catalog, verifies and installs release archives, and prefetches Meow Meadow Pack 02 when the player reaches level 20. The remaining worlds stay planned until the Meow Meadow flow is confirmed. Existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
+The TinyFit app downloads the startup pack on first launch, reads the published-pack catalog, verifies and installs release archives, and prefetches Meow Meadow Pack 02 when the player reaches level 20. The remaining worlds stay planned until the Meow Meadow flow is confirmed. Existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
 
 Artwork must be copied from approved masters and split only along the visible seams in those masters. The pack builder does not generate seams or infer piece boundaries.
 

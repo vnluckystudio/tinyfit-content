@@ -35,7 +35,7 @@
     "w01-024",
     "w01-025"
   ],
-  "offlineIncluded": true,
+  "offlineIncluded": false,
   "contentStatus": "ready",
   "availableSourceLevelIds": [
     "w01-001",
@@ -65,8 +65,8 @@
     "w01-025"
   ],
   "missingArtworkCount": 0,
-  "releaseTag": null,
-  "assetName": null,
-  "sizeBytes": null,
-  "sha256": null
+  "releaseTag": "w01-p01-v1.0.2",
+  "assetName": "tinyfit-w01-p01-v1.0.2.zip",
+  "sizeBytes": 70373787,
+  "sha256": "21b9cf8d812aeca4a4b2d50582c1d1435dc8882a3127bb529ce44254851f360a"
 }

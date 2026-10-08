@@ -4,7 +4,6 @@
   "totalWorlds": 20,
   "levelsPerWorld": 50,
   "levelsPerPack": 25,
-  "offlineStarterPackId": "w01-p01",
   "preloadWindowLevels": 25,
   "keepCurrentAndNextPack": true,
   "worlds": [
@@ -19,7 +18,7 @@
         "w01-p01",
         "w01-p02"
       ],
-      "offlineStarter": true,
+      "offlineStarter": false,
       "contentStatus": "ready"
     },
     {
@@ -331,5 +330,6 @@
       "sizeBytes": 72416333,
       "sha256": "28d28f244e070ca27632876e83bea2e1a1d5839d8604f2989f7786a65ca94ec4"
     }
-  ]
+  ],
+  "startupDownloadPackId": "w01-p01"
 }
