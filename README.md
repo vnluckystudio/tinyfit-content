@@ -19,15 +19,15 @@ Only `w01-p01` is bundled for offline play at first install. The app should pref
 
 ## Content status
 
-The 25-artwork `w01-p02` Meow Meadow pack is published as `w01-p02-v1.0.0`. The new 25-level offline starter artwork and pack archive are prepared in the private app workspace; they still need to be integrated into the app bundle before `w01-p01` can be marked offline-included. No incomplete pack is listed in `publishedPacks`.
+The 25-level `w01-p01` Meow Meadow starter pack is bundled in the app for offline play. The 25-artwork `w01-p02` follow-up pack is published as `w01-p02-v1.0.0`; the public catalog lists it for client downloads. `w01-p01` remains outside `publishedPacks` because it ships inside the app.
 
-This catalog is the approved target structure, not yet a client-ready downloadable catalog: the TinyFit app still uses its bundled pilot content and has not switched to the world/pack loader. The existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
+The TinyFit app now loads the offline starter pack, reads the published-pack catalog, verifies and installs release archives, and prefetches Meow Meadow Pack 02 when the player reaches level 20. The remaining worlds stay planned until the Meow Meadow flow is confirmed. Existing pilot releases and their catalog are preserved under `archive/pilot-30/`.
 
 Artwork must be copied from approved masters and split only along the visible seams in those masters. The pack builder does not generate seams or infer piece boundaries.
 
 ## Build a complete pack
 
-The private app repository is the source for level definitions and artwork. Build from a local checkout after all 25 level masters, piece images, and region records are present:
+The private app repository is the source for level definitions and artwork. New packs are built from `TinyFit/Resources/Artwork/Worlds/<world>/Packs/<pack>`; legacy pilot content remains a fallback. Build from a local checkout after all 25 level masters, piece images, and region records are present:
 
 ```sh
 python3 tools/build_pack.py \

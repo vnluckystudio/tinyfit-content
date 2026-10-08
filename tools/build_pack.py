@@ -53,10 +53,17 @@ def main() -> None:
         parser.error(str(error))
 
     source = args.source_root.resolve()
-    levels_path = source / "TinyFit/Resources/Levels/levels.json"
-    regions_path = source / "TinyFit/Resources/Demo/level_regions.json"
-    art_dir = source / "TinyFit/Resources/Demo/LevelArt"
-    pieces_dir = source / "TinyFit/Resources/Demo/LevelPieces"
+    pack_source = source / "TinyFit/Resources/Artwork/Worlds" / f"{world['order']:02d}-{world['slug']}" / "Packs" / f"{pack['packNumber']:02d}"
+    if pack_source.is_dir():
+        levels_path = pack_source / "levels.json"
+        regions_path = pack_source / "level_regions.json"
+        art_dir = pack_source / "LevelArt"
+        pieces_dir = pack_source / "LevelPieces"
+    else:
+        levels_path = source / "TinyFit/Resources/Levels/levels.json"
+        regions_path = source / "TinyFit/Resources/Demo/level_regions.json"
+        art_dir = source / "TinyFit/Resources/Demo/LevelArt"
+        pieces_dir = source / "TinyFit/Resources/Demo/LevelPieces"
     for required in (levels_path, regions_path, art_dir, pieces_dir):
         if not required.exists():
             parser.error(f"Missing source path: {required}")
@@ -69,7 +76,7 @@ def main() -> None:
     missing_levels = []
     for new_id in pack["levelIds"]:
         source_id = new_to_old.get(new_id, new_id)
-        level = by_id.get(source_id)
+        level = by_id.get(source_id) or by_id.get(new_id)
         if level is None:
             missing_levels.append(new_id)
         else:
