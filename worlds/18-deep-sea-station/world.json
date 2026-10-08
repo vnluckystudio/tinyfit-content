@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w18",
+  "slug": "deep-sea-station",
+  "order": 18,
+  "title": "Deep Sea Station",
+  "description": "Submarines and deep ocean creatures",
+  "theme": "deep-sea",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w18-p01",
+    "w18-p02"
+  ],
+  "legacyLevelIds": []
+}

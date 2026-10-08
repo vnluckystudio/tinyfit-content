@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w07",
+  "slug": "dino-discovery-valley",
+  "order": 7,
+  "title": "Dino Discovery Valley",
+  "description": "Friendly dinosaurs in a prehistoric valley",
+  "theme": "dinosaurs",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w07-p01",
+    "w07-p02"
+  ],
+  "legacyLevelIds": []
+}

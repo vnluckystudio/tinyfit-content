@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "w05-p01",
+  "worldId": "w05",
+  "worldOrder": 5,
+  "packNumber": 1,
+  "levelRange": [
+    1,
+    25
+  ],
+  "levelIds": [
+    "w05-001",
+    "w05-002",
+    "w05-003",
+    "w05-004",
+    "w05-005",
+    "w05-006",
+    "w05-007",
+    "w05-008",
+    "w05-009",
+    "w05-010",
+    "w05-011",
+    "w05-012",
+    "w05-013",
+    "w05-014",
+    "w05-015",
+    "w05-016",
+    "w05-017",
+    "w05-018",
+    "w05-019",
+    "w05-020",
+    "w05-021",
+    "w05-022",
+    "w05-023",
+    "w05-024",
+    "w05-025"
+  ],
+  "offlineIncluded": false,
+  "contentStatus": "partial-source",
+  "availableSourceLevelIds": [
+    "food_001",
+    "food_002",
+    "food_003",
+    "food_004",
+    "food_005",
+    "food_006"
+  ],
+  "missingArtworkCount": 19,
+  "releaseTag": null,
+  "assetName": null,
+  "sizeBytes": null,
+  "sha256": null
+}

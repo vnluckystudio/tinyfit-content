@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "game": "TinyFit",
+  "packs": [
+    {
+      "packId": "cats-01",
+      "version": "1.0.0",
+      "theme": "cats",
+      "sequence": 1,
+      "levelIds": [
+        "cat_001",
+        "cat_002",
+        "cat_003",
+        "cat_004",
+        "cat_005",
+        "cat_006"
+      ],
+      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/cats-01-v1.0.0/tinyfit-cats-01-v1.0.0.zip",
+      "sizeBytes": 11533884,
+      "sha256": "ecbd405d4d7f02dc4f6c6980ffcfe2c8cfbb645a95f87097981f728ace7979ad"
+    },
+    {
+      "packId": "food-01",
+      "version": "1.0.0",
+      "theme": "food",
+      "sequence": 2,
+      "levelIds": [
+        "food_001",
+        "food_002",
+        "food_003",
+        "food_004",
+        "food_005",
+        "food_006"
+      ],
+      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/food-01-v1.0.0/tinyfit-food-01-v1.0.0.zip",
+      "sizeBytes": 11543758,
+      "sha256": "4757b857a7f56afb7d24580bcb0a96d271344609b4903be1d562a61bc5d1a952"
+    },
+    {
+      "packId": "ocean-01",
+      "version": "1.0.0",
+      "theme": "ocean",
+      "sequence": 3,
+      "levelIds": [
+        "ocean_001",
+        "ocean_002",
+        "ocean_003",
+        "ocean_004",
+        "ocean_005",
+        "ocean_006"
+      ],
+      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/ocean-01-v1.0.0/tinyfit-ocean-01-v1.0.0.zip",
+      "sizeBytes": 17452733,
+      "sha256": "ba7450e2b73e65ae51a552f894e234779916572f6f0a02573e317d2d240ec259"
+    },
+    {
+      "packId": "space-01",
+      "version": "1.0.0",
+      "theme": "space",
+      "sequence": 4,
+      "levelIds": [
+        "space_001",
+        "space_002",
+        "space_003",
+        "space_004",
+        "space_005",
+        "space_006"
+      ],
+      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/space-01-v1.0.0/tinyfit-space-01-v1.0.0.zip",
+      "sizeBytes": 14679377,
+      "sha256": "59b14d77559a599543891a3003550e86d7b81bb35c3ba7f206e3a6b5842d1a01"
+    },
+    {
+      "packId": "vehicles-01",
+      "version": "1.0.0",
+      "theme": "vehicles",
+      "sequence": 5,
+      "levelIds": [
+        "vehicle_001",
+        "vehicle_002",
+        "vehicle_003",
+        "vehicle_004",
+        "vehicle_005",
+        "vehicle_006"
+      ],
+      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/vehicles-01-v1.0.0/tinyfit-vehicles-01-v1.0.0.zip",
+      "sizeBytes": 16014287,
+      "sha256": "cdfda15b07254f37500dd31d6cd1fea3f69511b87bb59d56f138e4fd7a1f3f7e"
+    }
+  ]
+}

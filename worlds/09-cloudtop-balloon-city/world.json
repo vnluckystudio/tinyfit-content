@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w09",
+  "slug": "cloudtop-balloon-city",
+  "order": 9,
+  "title": "Cloudtop Balloon City",
+  "description": "Balloons and a city above the clouds",
+  "theme": "sky",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w09-p01",
+    "w09-p02"
+  ],
+  "legacyLevelIds": []
+}

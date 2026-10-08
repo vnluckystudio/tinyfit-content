@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w10",
+  "slug": "arctic-lantern-bay",
+  "order": 10,
+  "title": "Arctic Lantern Bay",
+  "description": "Polar animals under the aurora",
+  "theme": "arctic",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w10-p01",
+    "w10-p02"
+  ],
+  "legacyLevelIds": []
+}

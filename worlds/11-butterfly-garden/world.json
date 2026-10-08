@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w11",
+  "slug": "butterfly-garden",
+  "order": 11,
+  "title": "Butterfly Garden",
+  "description": "Flowers, butterflies, and garden bugs",
+  "theme": "garden",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w11-p01",
+    "w11-p02"
+  ],
+  "legacyLevelIds": []
+}

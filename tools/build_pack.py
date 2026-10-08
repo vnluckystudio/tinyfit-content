@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a versioned TinyFit release ZIP from the app repository assets."""
+"""Build one complete 25-level TinyFit world pack from the private app checkout."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ import zipfile
 from pathlib import Path
 
 
-PACKS_FILE = Path(__file__).resolve().parents[1] / "packs" / "packs.json"
+ROOT = Path(__file__).resolve().parents[1]
 VERSION_RE = re.compile(r"\d+\.\d+\.\d+")
 
 
@@ -27,6 +27,15 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def find_pack(pack_id: str) -> tuple[Path, dict, dict]:
+    for path in (ROOT / "worlds").rglob("pack.json"):
+        pack = read_json(path)
+        if pack.get("id") == pack_id:
+            world = read_json(path.parents[2] / "world.json")
+            return path, pack, world
+    raise ValueError(f"Unknown pack ID: {pack_id}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-root", type=Path, required=True, help="TinyFit app repository checkout")
@@ -38,6 +47,11 @@ def main() -> None:
     if not VERSION_RE.fullmatch(args.version):
         parser.error("--version must use MAJOR.MINOR.PATCH, for example 1.0.0")
 
+    try:
+        pack_path, pack, world = find_pack(args.pack_id)
+    except ValueError as error:
+        parser.error(str(error))
+
     source = args.source_root.resolve()
     levels_path = source / "TinyFit/Resources/Levels/levels.json"
     regions_path = source / "TinyFit/Resources/Demo/level_regions.json"
@@ -47,19 +61,31 @@ def main() -> None:
         if not required.exists():
             parser.error(f"Missing source path: {required}")
 
-    pack_index = read_json(PACKS_FILE)
-    pack = next((entry for entry in pack_index["packs"] if entry["id"] == args.pack_id), None)
-    if pack is None:
-        parser.error(f"Unknown pack ID: {args.pack_id}")
-
+    old_to_new = read_json(ROOT / "migration/legacy-level-ids.json")["mapping"]
+    new_to_old = {new_id: old_id for old_id, new_id in old_to_new.items()}
     all_levels = read_json(levels_path)["levels"]
     by_id = {level["id"]: level for level in all_levels}
-    missing_ids = [level_id for level_id in pack["levelIds"] if level_id not in by_id]
-    if missing_ids:
-        parser.error(f"Pack references missing level IDs: {', '.join(missing_ids)}")
-    selected = [by_id[level_id] for level_id in pack["levelIds"]]
-    if any(level["theme"] != pack["theme"] for level in selected):
-        parser.error("Pack theme does not match one or more selected levels")
+    selected = []
+    missing_levels = []
+    for new_id in pack["levelIds"]:
+        source_id = new_to_old.get(new_id, new_id)
+        level = by_id.get(source_id)
+        if level is None:
+            missing_levels.append(new_id)
+        else:
+            selected.append(level)
+    if missing_levels:
+        parser.error(
+            f"Pack {args.pack_id} is incomplete: {len(missing_levels)} source levels are missing "
+            f"({', '.join(missing_levels[:8])}{'...' if len(missing_levels) > 8 else ''}). "
+            "Only complete 25-level packs can be published."
+        )
+    if len(selected) != 25:
+        parser.error(f"Pack {args.pack_id} must contain exactly 25 levels; found {len(selected)}")
+    if len({level["id"] for level in selected}) != 25:
+        parser.error(f"Pack {args.pack_id} contains duplicate source level IDs")
+    if any(level["theme"] != world["theme"] for level in selected):
+        parser.error(f"Pack {args.pack_id} mixes level themes; a world must remain thematically coherent")
 
     all_regions = read_json(regions_path)
     pack_regions: dict[str, list[dict]] = {}
@@ -81,31 +107,40 @@ def main() -> None:
                     parser.error(f"Missing piece artwork: {piece_path}")
                 files[f"LevelPieces/{piece_path.name}"] = piece_path
 
+    # Rewrite only the level IDs in the archive; every other gameplay field remains source-authored.
+    packaged_levels = []
+    source_to_new = {old_id: new_id for old_id, new_id in new_to_old.items()}
+    for level in selected:
+        item = dict(level)
+        item["id"] = source_to_new.get(level["id"], level["id"])
+        packaged_levels.append(item)
+
     args.output_dir.mkdir(parents=True, exist_ok=True)
     output = args.output_dir / f"tinyfit-{args.pack_id}-v{args.version}.zip"
-    level_manifest = {"levels": selected}
     payloads: dict[str, bytes] = {
-        "levels.json": (json.dumps(level_manifest, ensure_ascii=False, indent=2) + "\n").encode(),
+        "levels.json": (json.dumps({"levels": packaged_levels}, ensure_ascii=False, indent=2) + "\n").encode(),
         "level_regions.json": (json.dumps(pack_regions, ensure_ascii=False, indent=2) + "\n").encode(),
     }
-    file_entries = []
+    entries = []
     for archive_path, source_path in sorted(files.items()):
-        payloads[archive_path] = source_path.read_bytes()
-        file_entries.append({"path": archive_path, "size": source_path.stat().st_size, "sha256": sha256(source_path)})
+        data = source_path.read_bytes()
+        payloads[archive_path] = data
+        entries.append({"path": archive_path, "size": len(data), "sha256": hashlib.sha256(data).hexdigest()})
     for archive_path, data in payloads.items():
         if archive_path.endswith(".json"):
-            file_entries.append({"path": archive_path, "size": len(data), "sha256": hashlib.sha256(data).hexdigest()})
+            entries.append({"path": archive_path, "size": len(data), "sha256": hashlib.sha256(data).hexdigest()})
+
     manifest = {
         "schemaVersion": 1,
         "packId": pack["id"],
+        "worldId": world["id"],
+        "packNumber": pack["packNumber"],
         "version": args.version,
-        "theme": pack["theme"],
-        "sequence": pack["sequence"],
-        "levelIds": [level["id"] for level in selected],
-        "files": sorted(file_entries, key=lambda entry: entry["path"]),
+        "levelRange": pack["levelRange"],
+        "levelIds": pack["levelIds"],
+        "files": sorted(entries, key=lambda entry: entry["path"]),
     }
     payloads["manifest.json"] = (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode()
-
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         for archive_path, data in sorted(payloads.items()):
             archive.writestr(archive_path, data)

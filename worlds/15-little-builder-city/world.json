@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w15",
+  "slug": "little-builder-city",
+  "order": 15,
+  "title": "Little Builder City",
+  "description": "Construction vehicles and tiny building sites",
+  "theme": "construction",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w15-p01",
+    "w15-p02"
+  ],
+  "legacyLevelIds": []
+}

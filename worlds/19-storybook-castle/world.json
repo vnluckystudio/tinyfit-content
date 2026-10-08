@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w19",
+  "slug": "storybook-castle",
+  "order": 19,
+  "title": "Storybook Castle",
+  "description": "A castle, enchanted library, and storybook objects",
+  "theme": "storybook",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w19-p01",
+    "w19-p02"
+  ],
+  "legacyLevelIds": []
+}

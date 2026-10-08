@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "w02",
+  "slug": "coral-cove",
+  "order": 2,
+  "title": "Coral Cove",
+  "description": "A bright reef with friendly sea life",
+  "theme": "ocean",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w02-p01",
+    "w02-p02"
+  ],
+  "legacyLevelIds": [
+    "ocean_001",
+    "ocean_002",
+    "ocean_003",
+    "ocean_004",
+    "ocean_005",
+    "ocean_006"
+  ]
+}

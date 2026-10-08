@@ -1,91 +1,293 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "game": "TinyFit",
-  "packs": [
+  "totalWorlds": 20,
+  "levelsPerWorld": 50,
+  "levelsPerPack": 25,
+  "offlineStarterPackId": "w01-p01",
+  "preloadWindowLevels": 25,
+  "keepCurrentAndNextPack": true,
+  "worlds": [
     {
-      "packId": "cats-01",
-      "version": "1.0.0",
+      "id": "w01",
+      "slug": "meow-meadow",
+      "order": 1,
+      "title": "Meow Meadow",
       "theme": "cats",
-      "sequence": 1,
-      "levelIds": [
-        "cat_001",
-        "cat_002",
-        "cat_003",
-        "cat_004",
-        "cat_005",
-        "cat_006"
+      "levelCount": 50,
+      "packIds": [
+        "w01-p01",
+        "w01-p02"
       ],
-      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/cats-01-v1.0.0/tinyfit-cats-01-v1.0.0.zip",
-      "sizeBytes": 11533884,
-      "sha256": "ecbd405d4d7f02dc4f6c6980ffcfe2c8cfbb645a95f87097981f728ace7979ad"
+      "offlineStarter": true,
+      "contentStatus": "partial-source"
     },
     {
-      "packId": "food-01",
-      "version": "1.0.0",
-      "theme": "food",
-      "sequence": 2,
-      "levelIds": [
-        "food_001",
-        "food_002",
-        "food_003",
-        "food_004",
-        "food_005",
-        "food_006"
-      ],
-      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/food-01-v1.0.0/tinyfit-food-01-v1.0.0.zip",
-      "sizeBytes": 11543758,
-      "sha256": "4757b857a7f56afb7d24580bcb0a96d271344609b4903be1d562a61bc5d1a952"
-    },
-    {
-      "packId": "ocean-01",
-      "version": "1.0.0",
+      "id": "w02",
+      "slug": "coral-cove",
+      "order": 2,
+      "title": "Coral Cove",
       "theme": "ocean",
-      "sequence": 3,
-      "levelIds": [
-        "ocean_001",
-        "ocean_002",
-        "ocean_003",
-        "ocean_004",
-        "ocean_005",
-        "ocean_006"
+      "levelCount": 50,
+      "packIds": [
+        "w02-p01",
+        "w02-p02"
       ],
-      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/ocean-01-v1.0.0/tinyfit-ocean-01-v1.0.0.zip",
-      "sizeBytes": 17452733,
-      "sha256": "ba7450e2b73e65ae51a552f894e234779916572f6f0a02573e317d2d240ec259"
+      "offlineStarter": false,
+      "contentStatus": "partial-source"
     },
     {
-      "packId": "space-01",
-      "version": "1.0.0",
+      "id": "w03",
+      "slug": "starship-school",
+      "order": 3,
+      "title": "Starship School",
       "theme": "space",
-      "sequence": 4,
-      "levelIds": [
-        "space_001",
-        "space_002",
-        "space_003",
-        "space_004",
-        "space_005",
-        "space_006"
+      "levelCount": 50,
+      "packIds": [
+        "w03-p01",
+        "w03-p02"
       ],
-      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/space-01-v1.0.0/tinyfit-space-01-v1.0.0.zip",
-      "sizeBytes": 14679377,
-      "sha256": "59b14d77559a599543891a3003550e86d7b81bb35c3ba7f206e3a6b5842d1a01"
+      "offlineStarter": false,
+      "contentStatus": "partial-source"
     },
     {
-      "packId": "vehicles-01",
-      "version": "1.0.0",
+      "id": "w04",
+      "slug": "tiny-town-garage",
+      "order": 4,
+      "title": "Tiny Town Garage",
       "theme": "vehicles",
-      "sequence": 5,
-      "levelIds": [
-        "vehicle_001",
-        "vehicle_002",
-        "vehicle_003",
-        "vehicle_004",
-        "vehicle_005",
-        "vehicle_006"
+      "levelCount": 50,
+      "packIds": [
+        "w04-p01",
+        "w04-p02"
       ],
-      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/vehicles-01-v1.0.0/tinyfit-vehicles-01-v1.0.0.zip",
-      "sizeBytes": 16014287,
-      "sha256": "cdfda15b07254f37500dd31d6cd1fea3f69511b87bb59d56f138e4fd7a1f3f7e"
+      "offlineStarter": false,
+      "contentStatus": "partial-source"
+    },
+    {
+      "id": "w05",
+      "slug": "berry-bakehouse",
+      "order": 5,
+      "title": "Berry Bakehouse",
+      "theme": "food",
+      "levelCount": 50,
+      "packIds": [
+        "w05-p01",
+        "w05-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "partial-source"
+    },
+    {
+      "id": "w06",
+      "slug": "fernwood-forest",
+      "order": 6,
+      "title": "Fernwood Forest",
+      "theme": "forest",
+      "levelCount": 50,
+      "packIds": [
+        "w06-p01",
+        "w06-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w07",
+      "slug": "dino-discovery-valley",
+      "order": 7,
+      "title": "Dino Discovery Valley",
+      "theme": "dinosaurs",
+      "levelCount": 50,
+      "packIds": [
+        "w07-p01",
+        "w07-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w08",
+      "slug": "sunny-farmstead",
+      "order": 8,
+      "title": "Sunny Farmstead",
+      "theme": "farm",
+      "levelCount": 50,
+      "packIds": [
+        "w08-p01",
+        "w08-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w09",
+      "slug": "cloudtop-balloon-city",
+      "order": 9,
+      "title": "Cloudtop Balloon City",
+      "theme": "sky",
+      "levelCount": 50,
+      "packIds": [
+        "w09-p01",
+        "w09-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w10",
+      "slug": "arctic-lantern-bay",
+      "order": 10,
+      "title": "Arctic Lantern Bay",
+      "theme": "arctic",
+      "levelCount": 50,
+      "packIds": [
+        "w10-p01",
+        "w10-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w11",
+      "slug": "butterfly-garden",
+      "order": 11,
+      "title": "Butterfly Garden",
+      "theme": "garden",
+      "levelCount": 50,
+      "packIds": [
+        "w11-p01",
+        "w11-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w12",
+      "slug": "mountain-camp",
+      "order": 12,
+      "title": "Mountain Camp",
+      "theme": "camping",
+      "levelCount": 50,
+      "packIds": [
+        "w12-p01",
+        "w12-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w13",
+      "slug": "pirate-treasure-coast",
+      "order": 13,
+      "title": "Pirate Treasure Coast",
+      "theme": "pirates",
+      "levelCount": 50,
+      "packIds": [
+        "w13-p01",
+        "w13-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w14",
+      "slug": "dragonlight-valley",
+      "order": 14,
+      "title": "Dragonlight Valley",
+      "theme": "dragons",
+      "levelCount": 50,
+      "packIds": [
+        "w14-p01",
+        "w14-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w15",
+      "slug": "little-builder-city",
+      "order": 15,
+      "title": "Little Builder City",
+      "theme": "construction",
+      "levelCount": 50,
+      "packIds": [
+        "w15-p01",
+        "w15-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w16",
+      "slug": "desert-caravan",
+      "order": 16,
+      "title": "Desert Caravan",
+      "theme": "desert",
+      "levelCount": 50,
+      "packIds": [
+        "w16-p01",
+        "w16-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w17",
+      "slug": "snowglobe-toy-village",
+      "order": 17,
+      "title": "Snowglobe Toy Village",
+      "theme": "toys",
+      "levelCount": 50,
+      "packIds": [
+        "w17-p01",
+        "w17-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w18",
+      "slug": "deep-sea-station",
+      "order": 18,
+      "title": "Deep Sea Station",
+      "theme": "deep-sea",
+      "levelCount": 50,
+      "packIds": [
+        "w18-p01",
+        "w18-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w19",
+      "slug": "storybook-castle",
+      "order": 19,
+      "title": "Storybook Castle",
+      "theme": "storybook",
+      "levelCount": 50,
+      "packIds": [
+        "w19-p01",
+        "w19-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
+    },
+    {
+      "id": "w20",
+      "slug": "rainbow-carnival",
+      "order": 20,
+      "title": "Rainbow Carnival",
+      "theme": "carnival",
+      "levelCount": 50,
+      "packIds": [
+        "w20-p01",
+        "w20-p02"
+      ],
+      "offlineStarter": false,
+      "contentStatus": "planned"
     }
-  ]
+  ],
+  "publishedPacks": []
 }

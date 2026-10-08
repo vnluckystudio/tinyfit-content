@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w16",
+  "slug": "desert-caravan",
+  "order": 16,
+  "title": "Desert Caravan",
+  "description": "Camels, oasis stops, and desert wildlife",
+  "theme": "desert",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w16-p01",
+    "w16-p02"
+  ],
+  "legacyLevelIds": []
+}

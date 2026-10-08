@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "w05",
+  "slug": "berry-bakehouse",
+  "order": 5,
+  "title": "Berry Bakehouse",
+  "description": "Berries, pastries, and a cozy bakery",
+  "theme": "food",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w05-p01",
+    "w05-p02"
+  ],
+  "legacyLevelIds": [
+    "food_001",
+    "food_002",
+    "food_003",
+    "food_004",
+    "food_005",
+    "food_006"
+  ]
+}

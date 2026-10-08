@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "w04-p01",
+  "worldId": "w04",
+  "worldOrder": 4,
+  "packNumber": 1,
+  "levelRange": [
+    1,
+    25
+  ],
+  "levelIds": [
+    "w04-001",
+    "w04-002",
+    "w04-003",
+    "w04-004",
+    "w04-005",
+    "w04-006",
+    "w04-007",
+    "w04-008",
+    "w04-009",
+    "w04-010",
+    "w04-011",
+    "w04-012",
+    "w04-013",
+    "w04-014",
+    "w04-015",
+    "w04-016",
+    "w04-017",
+    "w04-018",
+    "w04-019",
+    "w04-020",
+    "w04-021",
+    "w04-022",
+    "w04-023",
+    "w04-024",
+    "w04-025"
+  ],
+  "offlineIncluded": false,
+  "contentStatus": "partial-source",
+  "availableSourceLevelIds": [
+    "vehicle_001",
+    "vehicle_002",
+    "vehicle_003",
+    "vehicle_004",
+    "vehicle_005",
+    "vehicle_006"
+  ],
+  "missingArtworkCount": 19,
+  "releaseTag": null,
+  "assetName": null,
+  "sizeBytes": null,
+  "sha256": null
+}

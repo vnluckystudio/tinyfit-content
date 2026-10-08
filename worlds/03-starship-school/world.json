@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "w03",
+  "slug": "starship-school",
+  "order": 3,
+  "title": "Starship School",
+  "description": "Planets, astronauts, and a space station",
+  "theme": "space",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w03-p01",
+    "w03-p02"
+  ],
+  "legacyLevelIds": [
+    "space_001",
+    "space_002",
+    "space_003",
+    "space_004",
+    "space_005",
+    "space_006"
+  ]
+}

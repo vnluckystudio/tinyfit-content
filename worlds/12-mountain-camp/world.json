@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w12",
+  "slug": "mountain-camp",
+  "order": 12,
+  "title": "Mountain Camp",
+  "description": "Camping, mountains, and a quiet lake",
+  "theme": "camping",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w12-p01",
+    "w12-p02"
+  ],
+  "legacyLevelIds": []
+}

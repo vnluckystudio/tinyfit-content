@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "w01",
+  "slug": "meow-meadow",
+  "order": 1,
+  "title": "Meow Meadow",
+  "description": "Cats and a little village",
+  "theme": "cats",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": true,
+  "packIds": [
+    "w01-p01",
+    "w01-p02"
+  ],
+  "legacyLevelIds": [
+    "cat_001",
+    "cat_002",
+    "cat_003",
+    "cat_004",
+    "cat_005",
+    "cat_006"
+  ]
+}

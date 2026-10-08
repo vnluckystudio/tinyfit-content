@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w13",
+  "slug": "pirate-treasure-coast",
+  "order": 13,
+  "title": "Pirate Treasure Coast",
+  "description": "Sailing ships, islands, and buried treasure",
+  "theme": "pirates",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w13-p01",
+    "w13-p02"
+  ],
+  "legacyLevelIds": []
+}

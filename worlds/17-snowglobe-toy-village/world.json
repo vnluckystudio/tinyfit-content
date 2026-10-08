@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w17",
+  "slug": "snowglobe-toy-village",
+  "order": 17,
+  "title": "Snowglobe Toy Village",
+  "description": "Wooden toys and a snowy village",
+  "theme": "toys",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w17-p01",
+    "w17-p02"
+  ],
+  "legacyLevelIds": []
+}

@@ -1,27 +1,23 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["schemaVersion", "packId", "version", "theme", "sequence", "levelIds", "files"],
+  "required": ["schemaVersion", "id", "worldId", "worldOrder", "packNumber", "levelRange", "levelIds", "offlineIncluded", "contentStatus", "availableSourceLevelIds", "missingArtworkCount"],
   "properties": {
     "schemaVersion": {"const": 1},
-    "packId": {"type": "string"},
-    "version": {"type": "string"},
-    "theme": {"type": "string"},
-    "sequence": {"type": "integer", "minimum": 1},
-    "levelIds": {"type": "array", "items": {"type": "string"}},
-    "files": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["path", "size", "sha256"],
-        "properties": {
-          "path": {"type": "string"},
-          "size": {"type": "integer", "minimum": 0},
-          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
-        },
-        "additionalProperties": false
-      }
-    }
+    "id": {"type": "string", "pattern": "^w[0-9]{2}-p0[12]$"},
+    "worldId": {"type": "string", "pattern": "^w[0-9]{2}$"},
+    "worldOrder": {"type": "integer", "minimum": 1, "maximum": 20},
+    "packNumber": {"type": "integer", "enum": [1, 2]},
+    "levelRange": {"type": "array", "prefixItems": [{"type": "integer"}, {"type": "integer"}], "minItems": 2, "maxItems": 2},
+    "levelIds": {"type": "array", "minItems": 25, "maxItems": 25, "items": {"type": "string"}},
+    "offlineIncluded": {"type": "boolean"},
+    "contentStatus": {"enum": ["planned", "partial-source", "ready", "published"]},
+    "availableSourceLevelIds": {"type": "array", "items": {"type": "string"}},
+    "missingArtworkCount": {"type": "integer", "minimum": 0, "maximum": 25},
+    "releaseTag": {"type": ["string", "null"]},
+    "assetName": {"type": ["string", "null"]},
+    "sizeBytes": {"type": ["integer", "null"]},
+    "sha256": {"type": ["string", "null"]}
   },
   "additionalProperties": false
 }

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "w03-p01",
+  "worldId": "w03",
+  "worldOrder": 3,
+  "packNumber": 1,
+  "levelRange": [
+    1,
+    25
+  ],
+  "levelIds": [
+    "w03-001",
+    "w03-002",
+    "w03-003",
+    "w03-004",
+    "w03-005",
+    "w03-006",
+    "w03-007",
+    "w03-008",
+    "w03-009",
+    "w03-010",
+    "w03-011",
+    "w03-012",
+    "w03-013",
+    "w03-014",
+    "w03-015",
+    "w03-016",
+    "w03-017",
+    "w03-018",
+    "w03-019",
+    "w03-020",
+    "w03-021",
+    "w03-022",
+    "w03-023",
+    "w03-024",
+    "w03-025"
+  ],
+  "offlineIncluded": false,
+  "contentStatus": "partial-source",
+  "availableSourceLevelIds": [
+    "space_001",
+    "space_002",
+    "space_003",
+    "space_004",
+    "space_005",
+    "space_006"
+  ],
+  "missingArtworkCount": 19,
+  "releaseTag": null,
+  "assetName": null,
+  "sizeBytes": null,
+  "sha256": null
+}

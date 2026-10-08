@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "w04",
+  "slug": "tiny-town-garage",
+  "order": 4,
+  "title": "Tiny Town Garage",
+  "description": "Tiny vehicles and their busy town",
+  "theme": "vehicles",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w04-p01",
+    "w04-p02"
+  ],
+  "legacyLevelIds": [
+    "vehicle_001",
+    "vehicle_002",
+    "vehicle_003",
+    "vehicle_004",
+    "vehicle_005",
+    "vehicle_006"
+  ]
+}

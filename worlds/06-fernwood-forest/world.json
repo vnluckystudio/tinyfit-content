@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "w06",
+  "slug": "fernwood-forest",
+  "order": 6,
+  "title": "Fernwood Forest",
+  "description": "Forest animals and leafy trails",
+  "theme": "forest",
+  "levelCount": 50,
+  "levelsPerPack": 25,
+  "offlineStarter": false,
+  "packIds": [
+    "w06-p01",
+    "w06-p02"
+  ],
+  "legacyLevelIds": []
+}
