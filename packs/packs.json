@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "packs": [
+    {"id": "cats-01", "theme": "cats", "sequence": 1, "levelIds": ["cat_001", "cat_002", "cat_003", "cat_004", "cat_005", "cat_006"]},
+    {"id": "food-01", "theme": "food", "sequence": 2, "levelIds": ["food_001", "food_002", "food_003", "food_004", "food_005", "food_006"]},
+    {"id": "ocean-01", "theme": "ocean", "sequence": 3, "levelIds": ["ocean_001", "ocean_002", "ocean_003", "ocean_004", "ocean_005", "ocean_006"]},
+    {"id": "space-01", "theme": "space", "sequence": 4, "levelIds": ["space_001", "space_002", "space_003", "space_004", "space_005", "space_006"]},
+    {"id": "vehicles-01", "theme": "vehicles", "sequence": 5, "levelIds": ["vehicle_001", "vehicle_002", "vehicle_003", "vehicle_004", "vehicle_005", "vehicle_006"]}
+  ]
+}

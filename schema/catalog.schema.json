@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "game", "packs"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "game": {"const": "TinyFit"},
+    "packs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["packId", "version", "theme", "sequence", "levelIds", "downloadURL", "sizeBytes", "sha256"],
+        "properties": {
+          "packId": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+          "theme": {"type": "string"},
+          "sequence": {"type": "integer", "minimum": 1},
+          "levelIds": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "downloadURL": {"type": "string", "format": "uri"},
+          "sizeBytes": {"type": "integer", "minimum": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

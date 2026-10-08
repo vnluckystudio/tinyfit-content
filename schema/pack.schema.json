@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "packId", "version", "theme", "sequence", "levelIds", "files"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "packId": {"type": "string"},
+    "version": {"type": "string"},
+    "theme": {"type": "string"},
+    "sequence": {"type": "integer", "minimum": 1},
+    "levelIds": {"type": "array", "items": {"type": "string"}},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "size", "sha256"],
+        "properties": {
+          "path": {"type": "string"},
+          "size": {"type": "integer", "minimum": 0},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
