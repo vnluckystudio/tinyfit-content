@@ -370,6 +370,47 @@
       "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/w01-p02-v1.0.0/tinyfit-w01-p02-v1.0.0.zip",
       "sizeBytes": 72416333,
       "sha256": "28d28f244e070ca27632876e83bea2e1a1d5839d8604f2989f7786a65ca94ec4"
+    },
+    {
+      "packId": "w02-p01",
+      "version": "1.0.0",
+      "worldId": "w02",
+      "packNumber": 1,
+      "theme": "ocean",
+      "levelRange": [
+        1,
+        25
+      ],
+      "levelIds": [
+        "w02-001",
+        "w02-002",
+        "w02-003",
+        "w02-004",
+        "w02-005",
+        "w02-006",
+        "w02-007",
+        "w02-008",
+        "w02-009",
+        "w02-010",
+        "w02-011",
+        "w02-012",
+        "w02-013",
+        "w02-014",
+        "w02-015",
+        "w02-016",
+        "w02-017",
+        "w02-018",
+        "w02-019",
+        "w02-020",
+        "w02-021",
+        "w02-022",
+        "w02-023",
+        "w02-024",
+        "w02-025"
+      ],
+      "downloadURL": "https://github.com/vnluckystudio/tinyfit-content/releases/download/w02-p01-v1.0.0/tinyfit-w02-p01-v1.0.0.zip",
+      "sizeBytes": 48602885,
+      "sha256": "e4453bee7b04c1c8cbc37cc3e275379cd54307437d7bd97b9b287fe0862c9795"
     }
   ],
   "startupDownloadPackId": "w01-p01"

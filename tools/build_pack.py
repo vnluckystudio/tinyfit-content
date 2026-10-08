@@ -97,8 +97,8 @@ def main() -> None:
     all_regions = read_json(regions_path)
     pack_regions: dict[str, list[dict]] = {}
     files: dict[str, Path] = {}
+    map_source = pack_source / "HomeMap" if pack_source.is_dir() else source / "TinyFit/Resources/HomeMap"
     if pack["id"] == "w01-p01":
-        map_source = source / "TinyFit/Resources/HomeMap"
         map_names = [*(f"meow-meadow-map-page-{number:02d}.png" for number in range(1, 11)),
                      "meow-meadow-cloud-left.png", "meow-meadow-cloud-right.png"]
         for name in map_names:
@@ -106,6 +106,9 @@ def main() -> None:
             if not map_path.is_file():
                 parser.error(f"Missing starter map artwork: {map_path}")
             files[f"HomeMap/{name}"] = map_path
+    elif map_source.is_dir():
+        for map_path in sorted(map_source.glob("*.png")):
+            files[f"HomeMap/{map_path.name}"] = map_path
 
     for level in selected:
         target_asset = level["targetAsset"]
