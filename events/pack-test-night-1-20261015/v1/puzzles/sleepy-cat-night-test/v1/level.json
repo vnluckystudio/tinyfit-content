@@ -1,0 +1,71 @@
+{
+  "levels": [
+    {
+      "id": "w01-001",
+      "theme": "cats",
+      "title": "Sleepy Cat",
+      "difficulty": 1,
+      "targetAsset": "cat_big_001",
+      "pieceCount": 6,
+      "snapPositionTolerance": 52,
+      "snapRotationTolerance": 18,
+      "allowRotation": false,
+      "pieces": [
+        {
+          "id": "c01",
+          "asset": "🐱",
+          "targetX": 0.42430712833749984,
+          "targetY": 0.37903749135440823,
+          "targetRotation": 0,
+          "targetScale": 1,
+          "trayOrder": 0
+        },
+        {
+          "id": "c02",
+          "asset": "🐱",
+          "targetX": 0.15982810896538854,
+          "targetY": 0.534255760798582,
+          "targetRotation": 0,
+          "targetScale": 1,
+          "trayOrder": 1
+        },
+        {
+          "id": "c03",
+          "asset": "🐱",
+          "targetX": 0.7561724522888713,
+          "targetY": 0.5342755819578183,
+          "targetRotation": 0,
+          "targetScale": 1,
+          "trayOrder": 2
+        },
+        {
+          "id": "c04",
+          "asset": "🐱",
+          "targetX": 0.5024529928691532,
+          "targetY": 0.5753143525166612,
+          "targetRotation": 0,
+          "targetScale": 1,
+          "trayOrder": 3
+        },
+        {
+          "id": "c05",
+          "asset": "🐱",
+          "targetX": 0.2115913971125731,
+          "targetY": 0.6750907079982944,
+          "targetRotation": 0,
+          "targetScale": 1,
+          "trayOrder": 4
+        },
+        {
+          "id": "c06",
+          "asset": "🐱",
+          "targetX": 0.5406190568072748,
+          "targetY": 0.7301977271153066,
+          "targetRotation": 0,
+          "targetScale": 1,
+          "trayOrder": 5
+        }
+      ]
+    }
+  ]
+}

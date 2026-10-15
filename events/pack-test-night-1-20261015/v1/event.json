@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "1",
+  "eventId": "pack-test-night-1-20261015",
+  "title": "Night Pack Test · Meow Meadow",
+  "description": "A short event test using Sleepy Cat from the published w01-p01 pack.",
+  "startsAt": "2026-10-15T21:00:00+09:00",
+  "endsAt": "2026-10-15T21:30:00+09:00",
+  "puzzles": [
+    {
+      "id": "sleepy-cat-night-test",
+      "title": "Sleepy Cat",
+      "sortOrder": 1,
+      "contentVersion": "1",
+      "levelUrl": "puzzles/sleepy-cat-night-test/v1/level.json",
+      "regionsUrl": "puzzles/sleepy-cat-night-test/v1/level_regions.json",
+      "recipeUrl": "puzzles/sleepy-cat-night-test/v1/LevelMasks/cat_big_001.json",
+      "assets": [
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/LevelArt/cat_big_001_seam_free.webp",
+          "sizeBytes": 19826,
+          "sha256": "bad9fe6177727f83dfc181bf6a4c59d46621464943f55ded877aab8e96ef4486"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/LevelMasks/cat_big_001.json",
+          "sizeBytes": 848,
+          "sha256": "14cdd0477030c7be842ead6d19ddcd8db566933c5d2ccfb4097b6bb00828510c"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/LevelMasks/cat_big_001_piece_01_mask.png",
+          "sizeBytes": 1235,
+          "sha256": "bf6fe20a49757c4e2c366fd1320fb8c225bd6f3270e6145e1397198fad61f96a"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/LevelMasks/cat_big_001_piece_02_mask.png",
+          "sizeBytes": 416,
+          "sha256": "54e951a1a3d9f7ed36b877ef13ab9d2b52f02973258d8addcc5f769c8000cbca"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/LevelMasks/cat_big_001_piece_03_mask.png",
+          "sizeBytes": 1113,
+          "sha256": "76d0455cf20a1bb08bfa0564478d4cee0467548f3fc885c19f93c683ae73a91d"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/LevelMasks/cat_big_001_piece_04_mask.png",
+          "sizeBytes": 514,
+          "sha256": "7a2b80ff1a08710c77ca1fc9f877bd90e7ce4d2dba74ccf0cc3d3e542f4239df"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/LevelMasks/cat_big_001_piece_05_mask.png",
+          "sizeBytes": 752,
+          "sha256": "cf6ec4ef958cece9be1cb7ecacca6d15d988a113763af2a3231cacfc754b1030"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/LevelMasks/cat_big_001_piece_06_mask.png",
+          "sizeBytes": 1064,
+          "sha256": "76ec8b9521d0ac89ae272e89fca3df0eb667ded69feb3aff6366ea15dd88284b"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/LevelMasks/cat_big_001_seam_mask.png",
+          "sizeBytes": 10504,
+          "sha256": "af86ef504183aa6cd8fcf1d9b7ce61e687944d1a2335ff89f6bf69cce256095f"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/level.json",
+          "sizeBytes": 1740,
+          "sha256": "825e30c82d9019bef510c04a1b7dab1ac232275696e35ed77e581b05ae35497b"
+        },
+        {
+          "path": "puzzles/sleepy-cat-night-test/v1/level_regions.json",
+          "sizeBytes": 1928,
+          "sha256": "74ecc8fbed599e97e7ad4f8c4646e46c0b9046b3c14046d4f835fc3300caf565"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "coral_cove_001_v2": [
+    {
+      "asset": "coral_cove_001_v2_piece_01",
+      "sourceX": 0.5323301537678453,
+      "sourceY": 0.3151977727565062,
+      "regionX": 0.4041666666666667,
+      "regionY": 0.15555555555555556,
+      "regionWidth": 0.25972222222222224,
+      "regionHeight": 0.39305555555555555,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "coral_cove_001_v2_piece_02",
+      "sourceX": 0.2491722100215369,
+      "sourceY": 0.3889972694335699,
+      "regionX": 0.05277777777777778,
+      "regionY": 0.2,
+      "regionWidth": 0.37222222222222223,
+      "regionHeight": 0.36944444444444446,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "coral_cove_001_v2_piece_03",
+      "sourceX": 0.699388517770528,
+      "sourceY": 0.478449728565757,
+      "regionX": 0.5597222222222222,
+      "regionY": 0.3277777777777778,
+      "regionWidth": 0.3013888888888889,
+      "regionHeight": 0.32083333333333336,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "coral_cove_001_v2_piece_04",
+      "sourceX": 0.386383069835547,
+      "sourceY": 0.5044276607060222,
+      "regionX": 0.2652777777777778,
+      "regionY": 0.3736111111111111,
+      "regionWidth": 0.225,
+      "regionHeight": 0.24305555555555555,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "coral_cove_001_v2_piece_05",
+      "sourceX": 0.8421797203321142,
+      "sourceY": 0.5395904425236859,
+      "regionX": 0.7291666666666666,
+      "regionY": 0.38333333333333336,
+      "regionWidth": 0.2222222222222222,
+      "regionHeight": 0.2652777777777778,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "coral_cove_001_v2_piece_06",
+      "sourceX": 0.5405673541132421,
+      "sourceY": 0.713294777332322,
+      "regionX": 0.30416666666666664,
+      "regionY": 0.5416666666666666,
+      "regionWidth": 0.4666666666666667,
+      "regionHeight": 0.31666666666666665,
+      "minimumAreaFraction": 0.01
+    }
+  ]
+}

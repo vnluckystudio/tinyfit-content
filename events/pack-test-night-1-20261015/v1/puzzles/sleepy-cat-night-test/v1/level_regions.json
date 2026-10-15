@@ -1,0 +1,64 @@
+{
+  "cat_big_001": [
+    {
+      "asset": "cat_big_001_piece_01",
+      "sourceX": 0.42430712833749984,
+      "sourceY": 0.37903749135440823,
+      "regionX": 0.15555555555555556,
+      "regionY": 0.15,
+      "regionWidth": 0.4986111111111111,
+      "regionHeight": 0.44166666666666665,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "cat_big_001_piece_02",
+      "sourceX": 0.15982810896538854,
+      "sourceY": 0.534255760798582,
+      "regionX": 0.08888888888888889,
+      "regionY": 0.4597222222222222,
+      "regionWidth": 0.1597222222222222,
+      "regionHeight": 0.14444444444444443,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "cat_big_001_piece_03",
+      "sourceX": 0.7561724522888713,
+      "sourceY": 0.5342755819578183,
+      "regionX": 0.5680555555555555,
+      "regionY": 0.31805555555555554,
+      "regionWidth": 0.3680555555555556,
+      "regionHeight": 0.39444444444444443,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "cat_big_001_piece_04",
+      "sourceX": 0.5024529928691532,
+      "sourceY": 0.5753143525166612,
+      "regionX": 0.35833333333333334,
+      "regionY": 0.5138888888888888,
+      "regionWidth": 0.2777777777777778,
+      "regionHeight": 0.11944444444444445,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "cat_big_001_piece_05",
+      "sourceX": 0.2115913971125731,
+      "sourceY": 0.6750907079982944,
+      "regionX": 0.12638888888888888,
+      "regionY": 0.5388888888888889,
+      "regionWidth": 0.22916666666666666,
+      "regionHeight": 0.28194444444444444,
+      "minimumAreaFraction": 0.01
+    },
+    {
+      "asset": "cat_big_001_piece_06",
+      "sourceX": 0.5406190568072748,
+      "sourceY": 0.7301977271153066,
+      "regionX": 0.2263888888888889,
+      "regionY": 0.5902777777777778,
+      "regionWidth": 0.6944444444444444,
+      "regionHeight": 0.24305555555555555,
+      "minimumAreaFraction": 0.01
+    }
+  ]
+}

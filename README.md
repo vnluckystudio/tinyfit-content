@@ -46,3 +46,7 @@ The tool refuses to package a partial 25-level pack. Review the generated ZIP an
 ## Pilot ROI
 
 Use release download counts as an initial demand signal. App telemetry is needed to measure checksum/install success, offline play, pack completion, and how often players continue to the next pack. Use those results before producing the remaining artwork for all 1,000 levels.
+
+## Limited-time Event Puzzles
+
+See [EVENT_PUZZLES.md](EVENT_PUZZLES.md) for the public event catalog, content schema, validation, GitHub Pages deployment and versioning instructions. Event content is public; schedules use the device clock.

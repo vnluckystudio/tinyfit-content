@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "1",
+  "events": [
+    {
+      "id": "pack-test-night-1-20261015",
+      "title": "Night Pack Test · Meow Meadow",
+      "description": "A short event test using Sleepy Cat from the published w01-p01 pack.",
+      "startsAt": "2026-10-15T21:00:00+09:00",
+      "endsAt": "2026-10-15T21:30:00+09:00",
+      "coverUrl": "events/pack-test-night-1-20261015/v1/cover.webp",
+      "manifestUrl": "events/pack-test-night-1-20261015/v1/event.json",
+      "contentVersion": "1",
+      "sortOrder": 1,
+      "minAppVersion": "1.0.2"
+    },
+    {
+      "id": "pack-test-night-2-20261015",
+      "title": "Night Pack Test · Coral Cove",
+      "description": "An overnight event test using Turtle and Clownfish from the published w02-p01 pack.",
+      "startsAt": "2026-10-15T21:30:00+09:00",
+      "endsAt": "2026-10-16T10:00:00+09:00",
+      "coverUrl": "events/pack-test-night-2-20261015/v1/cover.webp",
+      "manifestUrl": "events/pack-test-night-2-20261015/v1/event.json",
+      "contentVersion": "1",
+      "sortOrder": 2,
+      "minAppVersion": "1.0.2"
+    }
+  ]
+}
